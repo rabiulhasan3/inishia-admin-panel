@@ -16,6 +16,16 @@
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LcCsWoUAAAAAO520lKAXtblM0p76KNXL3n0dVUZ'
+        });
+      };
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
 
 </head>
 
@@ -39,7 +49,8 @@
                     <input type="password" class="form-control" placeholder="Password" required="">
                 </div>
                 <div class="from-group">
-                    <div class="g-recaptcha" data-sitekey="6Lc-cA4UAAAAAOlLBnjwQ9SKqQ8eJLlUP-evJawo"></div>
+                     <div id="html_element"></div>
+                     <br>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
 
